@@ -1,0 +1,708 @@
+@font-face {
+    font-family: "heavitas";
+    src: url("../fonts/heavitas-webfont.eot");
+    src: url("../fonts/heavitas-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/heavitas-webfont.woff2") format("woff2"),
+        url("../fonts/heavitas-webfont.woff") format("woff"),
+        url("../fonts/heavitas-webfont.ttf") format("truetype"),
+        url("../fonts/heavitas-webfont.svg#heavitasregular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "helveticabold";
+    src: url("../fonts/helvetica-bold-webfont.eot");
+    src: url("../fonts/helvetica-bold-webfont.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/helvetica-bold-webfont.woff2") format("woff2"),
+        url("../fonts/helvetica-bold-webfont.woff") format("woff"),
+        url("../fonts/helvetica-bold-webfont.ttf") format("truetype"),
+        url("../fonts/helvetica-bold-webfont.svg#helveticabold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AvenirLTStd-Roman";
+    src: url("../fonts/AvenirLTStd-Roman.eot");
+    src: url("../fonts/AvenirLTStd-Roman.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/AvenirLTStd-Roman.woff") format("woff2"),
+        url("../fonts/AvenirLTStd-Roman.woff") format("woff"),
+        url("../fonts/AvenirLTStd-Roman.ttf") format("truetype"),
+        url("../fonts/AvenirLTStd-Roman.svg#helveticabold") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    /* outline: 0.5px solid grey; */
+}
+
+:root {
+    --color-Agua: #68d3b1;
+    --color-verde: rgb(93, 177, 32);
+    --color-rosa: #ed8c80;
+    --color-amarillo: #eed32b;
+    --color-beige: #f7f5ee;
+    --color-gris: #575756;
+    --color-gris-claro: #8c8c8c;
+}
+
+body {
+    color: var(--color-gris);
+    background: var(--color-beige);
+    font-family: "AvenirLTStd-Roman";
+}
+
+/********************
+-------NAVBAR--------
+*********************/
+
+.barra {
+    background: var(--color-beige);
+    height: 104px;
+    width: 100%;
+    position: relative;
+    padding-top: 29px;
+}
+
+.barra .barra-header {
+    display: inline;
+}
+
+.barra .barra-header .barra-title {
+    display: inline-block;
+    padding-left: 4%;
+}
+
+.barra .barra-btn {
+    display: none;
+}
+
+.barra .barra-links {
+    display: flex;
+    float: right;
+    font-size: 18px;
+    padding-right: 4%;
+}
+
+.barra .barra-links .barra-item {
+    display: inline-block;
+    padding: 0 10px;
+    text-decoration: none;
+    color: var(--color-gris);
+    line-height: 75px;
+    transition: 0.3s;
+}
+
+.barra .barra-links .barra-item:hover {
+    color: var(--color-rosa);
+    text-decoration: underline;
+}
+
+.barra .barra-links .barra-item-btn {
+    font-family: Helvetica;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 12px;
+    width: 153px;
+    height: 34px;
+    margin: 15px auto 0;
+    line-height: 34px;
+    border-radius: 27px;
+    background-color: var(--color-verde);
+    text-align: center;
+    color: white;
+    display: flex;
+    transition: 0.3s;
+}
+
+.barra .barra-links .barra-item-btn:hover {
+    color: var(--color-verde);
+    background-color: white;
+    border: 1px solid var(--color-verde);
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.user-circle {
+    background-color: white;
+    border-radius: 50%;
+    margin: auto 0;
+    height: 20px;
+    padding: 0;
+}
+
+.flecha-baja {
+    height: 8px;
+    margin: auto 0;
+}
+
+.barra #barra-check {
+    display: none;
+}
+
+/********************
+--QUE PUEDES DONAR---
+*********************/
+.quePuedes {
+    background: var(--color-beige);
+    display: flex;
+    margin: 0 auto;
+    padding-top: 130px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.quePuedes .quePuedes-h1 {
+    font-family: "heavitas";
+    padding: 20px 0 62px 0;
+    font-size: 26px;
+}
+
+.quePuedes .quePuedes-iso-icono {
+    position: absolute;
+    top: 86.3%;
+    left: 81.5%;
+    z-index: 2;
+}
+
+/********************
+----Formas de Donar----
+*********************/
+
+.formasDonar {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    background-image: linear-gradient(360deg,
+            var(--color-Agua) 432px,
+            var(--color-beige) 68px);
+}
+
+.formasDonar .formasDonar-item {
+    width: 251px;
+    height: 420px;
+    margin: 0 25px;
+    background: white;
+}
+
+.formasDonar .formasDonar-item .formasDonar-nombre {
+    height: 68px;
+    text-align: center;
+    line-height: 68px;
+    text-transform: uppercase;
+    font-family: "heavitas";
+    font-size: 24px;
+    color: white;
+}
+
+.formasDonar .formasDonar-item .formasDonar-nombre-verde {
+    background: var(--color-verde);
+}
+
+.formasDonar .formasDonar-item .formasDonar-nombre-amarillo {
+    background: var(--color-amarillo);
+}
+
+.formasDonar .formasDonar-item .formasDonar-nombre-rosa {
+    background: var(--color-rosa);
+}
+
+.formasDonar .formasDonar-item .formasDonar-contenido {
+    margin: 27px 15px 27px;
+    font-family: "AvenirLTStd-Roman";
+    font-size: 14px;
+    text-align: justify;
+    line-height: 1.57;
+}
+
+/********************
+---------FORM--------
+*********************/
+
+.form {
+    background: white;
+    width: 100%;
+    position: relative;
+}
+
+.formulario {
+    padding-top: 36px;
+    padding-bottom: 62px;
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 746px;
+    max-width: 90%;
+}
+
+.formulario .formulario-h2 {
+    font-family: "heavitas";
+    font-size: 32px;
+    line-height: 0.94;
+    margin-bottom: 14px;
+}
+
+.formulario .formulario-p {
+    font-family: AvenirLTStd-Roman;
+    font-size: 18px;
+    line-height: 1.22;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.formulario .formulario-p-obligatorio {
+    text-align: justify;
+    font-size: 16px;
+    margin: 6px 0 22px 10px;
+}
+
+.formulario .formulario-title {
+    font-family: AvenirLTStd-Roman;
+    font-size: 16px;
+    line-height: 1.22;
+    text-align: left;
+    width: 95%;
+    margin: 9px 0 0 36px;
+}
+
+.formulario .formulario-input {
+    width: 95%;
+    height: 47px;
+    margin-top: 9px;
+    margin-bottom: 17px;
+    margin-left: 15px;
+    margin-right: 0;
+    padding: 16px 0 15px 0;
+    border-radius: 23.5px;
+    border: solid 1px #dcdcdc;
+}
+
+.formulario .formulario-message {
+    width: 95%;
+    height: 112px;
+    margin-top: 9px;
+    margin-bottom: 24px;
+    margin-left: 15px;
+    margin-right: auto;
+    padding: 25px auto 71px 27px;
+    border-radius: 16px;
+    border: solid 1px #dcdcdc;
+}
+
+::placeholder {
+    font-family: AvenirLTStd-Roman;
+    font-size: 16px;
+    line-height: 47px;
+    color: #b9b9b9;
+    width: 200px;
+    padding-left: 21px;
+}
+
+.formulario .cta-enviar {
+    display: block;
+    width: 203px;
+    height: 34px;
+    font-family: Helvetica;
+    background-color: var(--color-verde);
+    color: white;
+    border-radius: 27px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 34px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.formulario .cta-enviar:hover{
+    background-color: var(--color-beige);
+    color: var(--color-verde);
+    border: 1px solid var(--color-verde);
+}
+
+.form .figuras .cuadro-verde {
+    position: absolute;
+    top: 7.3%;
+    left: 9%;
+}
+
+.form .figuras .lego-verde {
+    position: absolute;
+    top: 50.1%;
+    left: 13.8%;
+}
+
+.form .figuras .rect-rosa {
+    position: absolute;
+    top: 70%;
+    left: 11.8%;
+}
+
+.form .figuras .cohete-rosa {
+    position: absolute;
+    top: 13.5%;
+    left: 84.1%;
+}
+
+.form .figuras .rect-amarillo {
+    position: absolute;
+    top: 48.2%;
+    left: 80.3%;
+}
+
+.form .figuras .rect-agua {
+    position: absolute;
+    top: 75.6%;
+    left: 85.6%;
+}
+
+.form span {
+    color: red;
+}
+
+/********************
+---------FOTTER-------
+*********************/
+footer{
+    background: var(--color-beige);
+}
+
+.pie {
+   
+    height: 263px;
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+.pie .pie-img {
+    padding-top: 69px;
+    width: 33%;
+    text-align: center;
+}
+
+.footer .pie-img .pie-logo {
+    width: 182px;
+    height: 66px;
+    text-align: center;
+}
+
+
+.pie .pie-opciones .lista:first-child {
+    padding-top: 59px;
+}
+
+.pie .pie-opciones .lista {
+
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.pie .pie-opciones .li-reserva {
+    list-style-image: url("../img/box-rosa-rd.png");
+}
+
+.pie .pie-opciones .li-inscribete {
+    list-style-image: url("../img/box-verde-rd.png");
+}
+
+.pie .pie-opciones .li-como {
+    list-style-image: url("../img/box-agua-rd.png");
+}
+
+.pie .pie-opciones {
+    width: 33%;
+    padding-left: 6%;
+    font-family: AvenirLTStd-Roman;
+    font-size: 24px;
+    line-height: 2.1;
+    color: #2e3d53;
+}
+
+.pie .pie-redes {
+    display: flex;
+    width: 33%;
+    text-align: center;
+    align-self: flex-end;
+    justify-content: center;
+    margin: 0;
+}
+
+.pie .redes-fb {
+    background-color: var(--color-amarillo);
+    padding: 20px;
+}
+
+.pie .redes-ig {
+    background: var(--color-verde);
+    padding: 20px;
+}
+
+.disenio {
+    font-family: Helvetica;
+    font-size: 20px;
+    height: 64px;
+    color: var(--color-gris-claro);
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    line-height: 64px;
+}
+
+
+
+/* Responsive 1220px*/
+@media screen and (max-width: 1220px) {
+    .quePuedes .quePuedes-iso-icono {
+        top: 69%;
+        left: 81.5%;
+    }
+
+    .form .figuras .lego-verde {
+        left: 6%;
+    }
+
+    .form .figuras .rect-rosa {
+        left: 9%;
+    }
+}
+
+/* Responsive 992 px*/
+@media screen and (max-width: 992px) {
+    .barra{
+        height: auto;
+    }
+    .barra-logo {
+        width: 236px;
+        height: 88px;
+    }
+
+    .barra .barra-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        margin-right: 4%;   
+        padding-top: 29px;
+    }
+
+    .barra .barra-btn label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+    }
+
+    .barra .barra-btn label:hover,
+    .barra #barra-check:checked~.barra-btn>label {
+        background-color: var(--color-amarillo);
+    }
+
+    .barra .barra-btn label span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 3px solid var(--color-verde);
+    }
+
+    .barra .barra-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 0;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 88px;
+        left: 0px;
+    }
+
+    .barra .barra-links a {
+        display: block;
+        width: 100%;
+    }
+
+    .barra #barra-check:not(:checked)~.barra-links {
+        height: 0px;
+    }
+
+    .barra #barra-check:checked~.barra-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+
+    .quePuedes .quePuedes-h1 {
+        font-size: 24px;
+    }
+
+    .formasDonar {
+        height: auto;
+        min-height: 1000px;
+        background-image: linear-gradient(360deg,
+                var(--color-Agua) 912px,
+                var(--color-beige) 88px);
+    }
+
+    .formasDonar .formasDonar-item {
+        width: 45%;
+        max-width: 90%;
+        margin: 20px 15px;
+    }
+
+    .formasDonar .formasDonar-item .formasDonar-contenido {
+        font-size: 16px;
+    }
+
+    .formulario {
+        width: 600px;
+        max-width: 90%;
+    }
+
+    .formulario .formulario-h2 {
+        font-size: 30px;
+    }
+
+    .form .figuras {
+        display: none;
+    }
+
+    .pie .pie-opciones {
+        font-size: 16px;
+    }
+}
+
+/* Responsive 600px*/
+@media screen and (max-width: 600px) {
+    .quePuedes .quePuedes-iso-icono {
+        display: none;
+    }
+
+    .formasDonar .formasDonar-item {
+        width: 90%;
+        height: auto;
+    }
+
+    .formasDonar .formasDonar-contenido {
+        margin: 27px 15px;
+        font-size: 16px;
+    }
+
+    .formulario .formulario-p {
+        font-size: 16px;
+    }
+
+    .formulario .formulario-h2 {
+        font-size: 28px;
+    }
+
+    .formulario{
+        width: 90%;
+    }
+
+    .pie {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        height: 412px;
+        width: 90%;
+    }
+
+    .pie .pie-img {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .pie .pie-img .pie-logo {
+        width: 236px;
+        height: 88px;
+    }
+
+    .pie .pie-opciones .lista:first-child {
+        padding-top: 0px;
+    }
+
+    .pie .pie-opciones {
+        width: 100%;
+        font-size: 24px;
+        padding: 15px 0 15px 5%;
+    }
+
+    .pie .pie-redes {
+        width: 100%;
+        height: auto;
+        padding: 15px 0;
+    }
+    .pie .redes-fb {
+        padding: 10px;
+    }
+    
+    .pie .redes-ig {
+        padding: 10px;
+    }
+
+    .disenio {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        height: auto;
+        text-align: center;
+    }
+}
+
+/* Responsive 350px*/
+@media screen and (max-width: 350px) {
+    .barra-logo {
+        width: 182px;
+        height: 66px;
+    }
+
+    .quePuedes .quePuedes-h1 {
+        font-size: 18px;
+    }
+
+    .formulario .formulario-h2 {
+        font-size: 26px;
+    }
+
+    .formulario .formulario-p {
+        font-size: 14px;
+    }
+
+    .formasDonar{
+        height: 1180px;
+        background-image: linear-gradient(360deg,
+                var(--color-Agua) 1092px,
+                var(--color-beige) 88px);
+    }
+
+    .pie .pie-opciones {
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .pie .redes-fb {
+        padding: 16px;
+    }
+
+    .pie .redes-ig {
+        padding: 16px;
+    }
+}
